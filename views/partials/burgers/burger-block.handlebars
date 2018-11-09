@@ -1,9 +1,11 @@
-<li>
-	{{burger_name}}
+<div class="burger">
+	
 <!--make sure first that these buttons show up, then change-->
 	<button class="change-eat" data-id="{{id}}" data-neweat="{{eat}}">
+		
 		{{#if eat}}EAT!{{else}}Order again{{/if}}
 	</button>
+	{{burger_name}}
 
 	<!--<button class="delete-burger" data-id="{{this.id}}">Delete</button>-->
-</li>
+</div>

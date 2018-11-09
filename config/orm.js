@@ -1,6 +1,6 @@
 
 let connection = require("../config/connection.js");
-
+//Add question marks where needed to send query to database.
 function printQuestionMarks(num) {
   let arr = [];
 
@@ -19,7 +19,7 @@ function objToSql(ob) {
     let value = ob[key];
 
     if (Object.hasOwnProperty.call(ob, key)) {
-      //Add quotation marks if string has spaces
+      //Add quotation marks if string has spaces.
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }

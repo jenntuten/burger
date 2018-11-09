@@ -1,7 +1,19 @@
-li {
+.burger {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: rebeccapurple;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.burgers {
+  float: left;
+  width: 47%;
+  display: grid;
+}
+
+.add-burger {
+  clear: both;
+  display: grid;
 }
 
 .label {

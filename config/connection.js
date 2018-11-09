@@ -1,5 +1,7 @@
+//Set up MySQL
 let mysql = require("mysql");
 
+//If running through JAWSDB_URL via Heroku, connect this way; otherwise, use the localhost connection.
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
