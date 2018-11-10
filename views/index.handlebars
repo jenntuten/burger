@@ -3,32 +3,24 @@
   <p class="lead">Pick a burger to devour--or add your own!</p>
 </div>
 
-<!--<div class="container">-->
-  <div class="card">
-    <div class="card-header">
-      <h4>Eat da Burger!</h4>
-    </div>
-    <div class="not-eaten">
-    {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
+<div class="container">
+  <div class="card" id="not-eaten">
+     <div class="card-header"><h4>Eat da Burger!</h4></div>
+      {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
   </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h4>Gimme More!</h4>
-    </div>
-    <div class="eaten">
-    {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
+  <div class="card" id="eaten">
+    <div class="card-header"><h4>Gimme More!</h4></div>
+      {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
   </div>
 </div>
 
-<form class="create-form">
-  <div class="card" id="addBurgerCard">
-    <div class="card-header">
-      <h4>Add a Burger</h4>
-    </div>
+<div class="card" id="addBurgerCard">
+  <div class="card-header"><h4>Add a Burger!</h4></div>
+  <form class="create-form"></form>
     <div class="form-group">
       <label for="bu">Burger Name:</label>
       <input type="text" id="bu" name="name">
-      <button type="submit" id="submitBtn">Add Burger</button>
+      <button type="submit">Add Burger</button>
     </div>
-</form>
+  </form>
+</div>
