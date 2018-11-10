@@ -2,30 +2,40 @@ body {
   background: url("../img/burger3.jpg");
   opacity: 80%;
 }
+
 .jumbotron {
-width: 90%;
-text-align: center;
-margin: 0 auto;
-margin-bottom: 8px;
-height: 200px;
-}
-.card {
   width: 90%;
+  text-align: center;
   margin: 0 auto;
-margin-bottom: 8px;
-  padding: 8px;
- 
+  margin-bottom: 8px;
+
+  font-weight: bold;
 }
 
+.card {
+  width: 100%;
+  margin-bottom: 8px;
+}
 .burger {
   padding: 5px;
-  margin: 5px;
-
+  margin-bottom: 5px;
+  
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  
+  
+}
+#not-eaten, #eaten {
+  width: 100%;
 }
 
 h4 {
   text-align: center;
 }
+
 #addBurgerCard {
   clear: both;
   width: 90%;
@@ -35,20 +45,21 @@ h4 {
   padding: 8px;
 }
 
-
 .label {
   font-weight: bold;
-}
-#submitBtn {
-  margin: 8px;
-}
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
 }
 
 .form-group {
   margin-bottom: 5px;
+  padding: 10px;
 }
 
+@media screen and (max-width: 608px) {
+  .container {
+    display: flex;
+    flex-wrap:wrap;
+    width: 90%;
+    padding: 8px;
+    margin: 0 auto;
+  }
+}
