@@ -9,7 +9,7 @@
       {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
   </div>
   <div class="card" id="eaten">
-    <div class="card-header"><h4>Gimme More!</h4></div>
+    <div class="card-header"><h4>Burgers Already Eaten</h4></div>
       {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
   </div>
 </div>
