@@ -34,7 +34,7 @@ function objToSql(ob) {
 
 // SQL statement functions.
 let orm = {
-  all: function(tableInput, cb) {
+  selectAll: function(tableInput, cb) {
     let queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -43,7 +43,7 @@ let orm = {
       cb(result);
     });
   },
-  create: function(table, cols, vals, cb) {
+  createOne: function(table, cols, vals, cb) {
     let queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -64,7 +64,7 @@ let orm = {
     });
   },
   // Example: {burger_name: Quadruple Bypass Burger, devoured: true}
-  update: function(table, objColVals, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
     let queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -73,19 +73,6 @@ let orm = {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
-  delete: function(table, condition, cb) {
-    let queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
