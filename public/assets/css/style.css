@@ -7,7 +7,7 @@ body {
   width: 90%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   font-weight: bold;
   background: goldenrod;
   color: white;
@@ -20,7 +20,7 @@ button {
   border-radius: 4px;
 }
 .card {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   opacity: .9;
 }
 .card-header {
@@ -37,7 +37,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  
+  justify-content: space-between;	
 }
 #not-eaten, #eaten {
   width: 100%;
@@ -50,7 +50,7 @@ h4 {
 #addBurgerCard {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
