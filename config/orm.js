@@ -1,6 +1,7 @@
 
 let connection = require("../config/connection.js");
-//Add question marks where needed to send query to database.
+
+//Add question marks where needed to translate data to MySQL syntax.
 function printQuestionMarks(num) {
   let arr = [];
   for (let i = 0; i < num; i++) {

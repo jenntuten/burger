@@ -1,5 +1,6 @@
 
 $(function() {
+  //Handles user request on click to change 'devoured' value (boolean). This is then sent to the database and returned as the opposite value.
   $(".change-eat").on("click", function(event) {
     let id = $(this).data("id");
     let newEat = $(this).data("neweat");
@@ -18,6 +19,7 @@ $(function() {
     );
   });
 
+  //Handles user request on click to add burger to database.
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
     let newBurger = {
