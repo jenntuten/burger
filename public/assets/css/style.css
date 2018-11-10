@@ -1,5 +1,5 @@
 body {
-  background: url("../img/burger3.jpg");
+  background: url("../img/burger.jpg");
   font-family: 'Dosis', sans-serif;
 }
 
@@ -22,6 +22,9 @@ button {
 .card {
   margin-bottom: 8px;
   opacity: .9;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 .card-header {
   background: maroon;
@@ -33,14 +36,18 @@ button {
   margin-bottom: 5px;
 }
 
-.container {
+/*.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   
-}
-#not-eaten, #eaten {
-  width: 100%;
+}*/
+.not-eaten, .eaten {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 h4 {
@@ -52,6 +59,7 @@ h4 {
   margin: 0 auto;
   margin-bottom: 8px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .label {
@@ -64,14 +72,17 @@ h4 {
 }
 
 @media screen and (max-width: 608px) {
-  .container {
+  /*.container {
     display: flex;
     flex-wrap:wrap;
     width: 100%;
     padding: 8px;
     margin: 0 auto;
-  }
+  }*/
   .jumbotron, #addBurgerCard, #not-eaten, #eaten  {
     width: 100%;
+  }
+  body {
+    background: url("../img/burger.jpg");
   }
 }

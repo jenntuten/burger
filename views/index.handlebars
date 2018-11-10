@@ -3,17 +3,20 @@
   <p class="lead">Pick a burger to devour--or add your own!</p>
 </div>
 
-<div class="container">
-  <div class="card" id="not-eaten">
+<!--<div class="container">-->
+  <div class="card">
     <div class="card-header">
       <h4>Eat da Burger!</h4>
     </div>
+    <div class="not-eaten">
     {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
   </div>
-  <div class="card" id="eaten">
+  </div>
+  <div class="card">
     <div class="card-header">
       <h4>Gimme More!</h4>
     </div>
+    <div class="eaten">
     {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
   </div>
 </div>
